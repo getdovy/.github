@@ -1,0 +1,31 @@
+name: Problem report
+description: Something does not work as it should.
+labels: ["problem"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: The error shown, and the log it names if any (dovy's are under /var/log/dovy).
+      render: text
+  - type: textarea
+    id: system
+    attributes:
+      label: System
+      description: "Output of: cat /etc/debian_version; uname -r; dovy --version (if installed)"
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: For kernel and driver problems; for example lspci -nn and lsusb.
+      render: text
